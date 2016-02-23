@@ -1,0 +1,8 @@
+#welcomeMessage {
+    text-align: center;
+    color: cadetblue;
+    outline-width: thin;
+    outline-color: darkcyan;
+    outline-style: groove;
+    font-family: sans-serif;
+}
