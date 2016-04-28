@@ -1,11 +1,22 @@
 #welcomeMessage {
     text-align: center;
     color: cadetblue;
-    outline-width: thin;
-    outline-color: darkcyan;
-    outline-style: groove;
     font-family: sans-serif;
 }
 #welcomeSub{
     font-size: 12pt;
+}
+
+#cityInfo{
+    font-family: sans-serif;
+    text-emphasis: bold;
+    font-size: 12pt;
+    border-bottom-width: thin;
+    border-bottom-color: deepskyblue;
+}
+
+#cityTitle{
+    font-size:20pt;
+    color: cadetblue;
+    text-align: center;
 }
