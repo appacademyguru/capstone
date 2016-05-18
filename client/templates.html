@@ -1,43 +1,155 @@
-<template name="home">
-    <div class="container">
-
-        <div class="col s12">
-            <h1 id='welcomeMessage'>Welcome to Survival of the Richest!</h1> </div>
-        <div class="col s10 offset-s1">
-            <h2 id='welcomeSub'>As you may have experienced, moving is no easy thing.  It requires research into whether you can afford the area, what schools are available, and the safety of the neighborhood. This website is here to make that process a little easier.  Enter the city of your choice to find out its demographics.
-        </h2>
-        </div>
-
-        <div class="col s6 offset-s3">
-            <form>
-                City:
-                <input type="text" name="city">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                </button>
-            </form>
-        </div>
-        <br>
-        <div class="col s2 offset-s5">
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="goCompare">Compare two cities
-            </button>
-        </div>
-    </div>
+<template name="header">
+    <header>
+        <nav class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <img class="responsive-img" src="logo.png" id="logo">
+                    <a href="#" class="brand-logo" id="logoText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$URVIVAL OF THE RICHE$T</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li id="goCompare">Compare Two Cities</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 </template>
+<template name="footer">
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s4 offset-s8">App Academy Capstone Project 2016</div>
+            </div>
+        </div>
+    </footer>
+</template>
+<template name="home">
+    {{>header}}
+    <main>
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h1 id='welcomeMessage' class="white-text">Welcome to Survival of the Richest!</h1> </div>
+            </div>
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <h2 id='welcomeSub'>As you may have experienced, moving is no easy thing.  It requires research into whether you can afford the area, what schools are available, and the safety of the neighborhood. This website is here to make that process a little easier.  Enter the city of your choice to find out its demographics.      
+        </h2>
+                </div>
+            </div>
+
+            <form class="col s12">
+                <div class="row" id="cityForm">
+                    <div class="input-field col s6 offset-s2">
+                        <input name="city" type="text" class="validate">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-green" type="submit" name="action">Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <br>
+        </div>
+    </main>
+    {{>footer}}
+</template>
+<!--home-->
 
 <template name="goCompare">
-
+    {{>header}}
+    <main>
+        <div class="container">
+            <div class="row">
+                <form class="col s12 center">
+                    <div class="row">
+                        <div class="col s12">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="input-field col s6 center">
+                            <input name="city1" type="text" class="validate">
+                            <label for="city1">City 1</label>
+                        </div>
+                        <div class="input-field col s6 center">
+                            <input name="city2" type="text" class="validate">
+                            <label for="city2">City 2</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect center" type="submit" name="action" id="twoCitiesbtn">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    {{>footer}}
 </template>
+<!--goCompare-->
 
 <template name="cityStats">
-    <div class="container">
-        {{getInfo}}
-        <div class="col s12" id="cityTitle">Results</div>
-        <div class="col s6" id ="cityInfo">City Name: {{cityName}}</div>
-        <div class="col s6" id ="cityInfo">Gas: $ {{gas}}</div>
-        <div class="col s6" id ="cityInfo">Bus: $ {{bus}}</div>
-        <div class="col s6" id ="cityInfo">Average Rent One Bedroom Apt: $ {{onebedapt}}</div>
-        <div class="col s6" id ="cityInfo">Average Salary: $ {{salary}}</div>
-        <div class="col s6" id ="cityInfo">Electricity: $ {{electricity}}</div>
-        <div class="col s6" id ="cityInfo">Water: $ {{water}}</div>
-    </div>
+    {{>header}}
+    <main>
+        <div class="container">
+            {{getInfo}}
+            <div class="col s12" id="cityTitle">Results</div>
+            <div class="row">
+                <div class="col s6" id="cityInfo1">City Name:</div>
+                <div class="col s6" id="cityResults"> {{cityName}}</div>
+            </div>
+            <div class="row">
+                <div class="col s6" id="cityInfo"><img class="responsive-img" src="gascan.png" id="cityIcon">Gas:</div>
+                <div class="col s6" id="cityResults"> $ {{gas}}</div>
+            </div>
+            <div class="row">
+                <div class="col s6" id="cityInfo"><img class="responsive-img" src="bus.png" id="cityIcon">Bus:</div>
+                <div class="col s6" id="cityResults"> $ {{bus}}</div>
+            </div>
+            <div class="row">
+            <div class="col s6" id="cityInfo"><img class="responsive-img" src="apt.png" id="cityIcon">Average Monthly Rent One Bedroom Apt:</div><div class="col s6" id="cityResults"> $ {{onebedapt}}</div>
+            </div>
+            <div class="row">
+                <div class="col s6" id="cityInfo"><img class="responsive-img" src="salary.png" id="cityIcon">Average Yearly Salary:</div><div class="col s6" id="cityResults">$ {{salary}}</div>
+            </div>
+            <div class="row">
+                <div class="col s6" id="cityInfo"><img class="responsive-img" src="kwh.png" id="cityIcon">Electricity (per kWh):</div><div class="col s6" id="cityResults"> $ {{electricity}}</div>
+            </div>
+            <div class="row">
+                <div class="col s6" id="cityInfo"><img class="responsive-img" src="water.png" id="cityIcon">Water (per Gallon):</div> <div class="col s6" id="cityResults">$ {{water}}</div>
+            </div>
+        </div>
+    </main>
+    {{>footer}}
+</template>
+<!--cityStats-->
+
+<template name="cityStats2">
+    {{>header}}
+    <main>
+        <div class="container">
+            {{getCities}}
+            <div class="col s12" id="cityTitle">Results</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="gascan.png" id="cityIcon">{{compareGas}}</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="bus.png" id="cityIcon">{{compareBus}}</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="apt.png" id="cityIcon">{{compareApt}}</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="salary.png" id="cityIcon">{{compareSalary}}</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="kwh.png" id="cityIcon">{{compareElectricity}}</div>
+            <div class="col s6 center" id="cityResults"><img class="responsive-img" src="water.png" id="cityIcon">{{compareWater}}</div>
+        </div>
+    </main>
+    {{>footer}}
+</template>
+
+<template name="error">
+    {{>header}}
+    <main>
+        <div class="container">
+        <h1 class="center">Try another City!</h1>
+        </div>
+    </main>
+    {{>footer}}
 </template>

@@ -1,22 +1,139 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    background-image: url(cityScape.jpg);
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: white;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.header {
+    background-color: rgba(34, 31, 31, 0.30);
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+footer.page-footer {
+    background-color: rgba(34, 31, 31, 0.67);
+}
+
+#twoCitiesbtn {
+    object-position: center;
+}
+
+#logo {
+    max-height: 5%;
+    max-width: 5%;
+    padding-top: 10px;
+}
+
+
+#logoText{
+    color: forestgreen;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    padding-bottom: 3px;
+}
+
 #welcomeMessage {
     text-align: center;
     color: cadetblue;
     font-family: sans-serif;
-}
-#welcomeSub{
-    font-size: 12pt;
+    font-size: 30pt;
+    background-color: rgba(34, 31, 31, 0.30);
+    border-radius: 15px;
 }
 
-#cityInfo{
+.btn{
+    background-color: white;
+    color: black;
+}
+
+.btn:hover, button:focus{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.input-field label{
+    color: white;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    border-bottom: 1px solid white;
+}
+
+#welcomeSub {
+    font-size: 12pt;
+    color: white;
+    background-color: rgba(34, 31, 31, 0.30);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#cityIcon{
+    height: 25px;
+    width: 25px;
+    padding-right: 5px;
+}
+
+#twoCitiesBtn{
+    padding-top: 25px;
+}
+
+#cityForm{
+    background-color: rgba(34, 31, 31, 0.50);
+    border-radius: 15px;
+}
+
+
+#cityInfo {
     font-family: sans-serif;
     text-emphasis: bold;
+    text-align: center;
     font-size: 12pt;
-    border-bottom-width: thin;
-    border-bottom-color: deepskyblue;
+    border-bottom: .5px solid gray; 
+    padding-bottom: 10px;
+    padding-top: 3px;
+    border-right: .5px solid gray;
+    background-color: rgba(34, 31, 31, 0.50);
+    border-top-left-radius: 10px;
 }
 
-#cityTitle{
-    font-size:20pt;
-    color: cadetblue;
+#cityInfo1{
+    font-family: sans-serif;
+    text-emphasis: bold;
     text-align: center;
+    font-size: 12pt;
+    border-bottom: .5px solid gray; 
+    padding-bottom: 18px;
+    padding-top: 3px;
+    border-right: .5px solid gray;
+    background-color: rgba(34, 31, 31, 0.50);
+    border-top-left-radius: 10px;
+}
+
+#cityResults{
+    font-family: sans-serif;
+    text-emphasis: bold;
+    text-align: center;
+    font-size: 12pt;
+    border-bottom: .5px solid gray; 
+    padding-bottom: 18px;
+    padding-top: 3px;
+    background-color: rgba(34, 31, 31, 0.50);
+    border-top-right-radius: 10px;
+}
+
+#cityTitle {
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }

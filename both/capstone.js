@@ -10,3 +10,9 @@
     Router.route('/cityStats', function () {
         this.render('cityStats');
     });
+    Router.route('/cityStats2', function(){
+        this.render('/cityStats2');
+    });
+    Router.route('/error', function(){
+        this.render('/error');
+    });
